@@ -19,7 +19,7 @@ import java.util.regex.Pattern;
  */
 @Service
 @Slf4j
-public class ConsultaEnderecoServiceImpl implements ConsultaEnerecoService {
+public class ConsultaEnderecoServiceImpl implements ConsultaEnderecoService {
 
     private SOAPConnectionFactory soapConnectionFactory;
     private SOAPConnection soapConnection;

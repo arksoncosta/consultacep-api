@@ -1,7 +1,7 @@
 package br.com.arkson.consultacepapi.controllers;
 
 import br.com.arkson.consultacepapi.model.Endereco;
-import br.com.arkson.consultacepapi.services.ConsultaEnerecoService;
+import br.com.arkson.consultacepapi.services.ConsultaEnderecoService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,12 +19,12 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class ConsultaEnderecoController {
 
-    private final ConsultaEnerecoService consultaEnerecoService;
+    private final ConsultaEnderecoService consultaEnderecoService;
 
     @GetMapping("{cep}")
     public ResponseEntity<Endereco> consultaEnderecoByCep(@PathVariable String cep) throws Exception {
         try {
-            Endereco endereco = consultaEnerecoService.getEnderecoCorreios(cep);
+            Endereco endereco = consultaEnderecoService.getEnderecoCorreios(cep);
             return ResponseEntity.ok(endereco);
         } catch (Exception e) {
             e.printStackTrace();
